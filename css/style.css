@@ -312,6 +312,12 @@ body.dark-theme .social a:nth-child(2) {
   margin-top: 16px;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .contact-wrapper form {
+    width: 90%;
+    margin-top: 16px;
+  }
+}
 footer {
   background-color: var(--secondary-background-color);
   border-top: 1px solid var(--border-color);
@@ -322,4 +328,9 @@ footer {
   justify-content: center;
   align-items: center;
   color: var(--text-color);
+}
+@media (max-width: 767px) {
+  * {
+    cursor: default !important;
+  }
 }
