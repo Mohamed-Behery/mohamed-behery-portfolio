@@ -104,6 +104,22 @@ main {
   padding: 16px 24px;
   border-radius: 24px;
 }
+.about .about-cta {
+  justify-content: start;
+}
+.about .about-cta .social {
+  margin-left: 32px;
+  margin-top: 16px;
+}
+.social a {
+  color: #0077b5;
+  border-radius: 50%;
+  font-size: 32px;
+  margin-left: 16px;
+}
+.social a:nth-child(2) {
+  color: #333;
+}
 .about .about-img {
   width: 400px;
   height: 400px;
@@ -152,10 +168,47 @@ main {
 }
 .skills-wrapper .skill {
   margin: 0 32px 32px;
-  background-color: #ddd;
+  background-color: #fff;
+  border: 1px solid #ddd;
   border-radius: 50%;
   padding: 8px;
 }
 .skills-wrapper .skill img {
   width: 48px;
+}
+.contact-wrapper {
+  margin-top: 32px;
+}
+.contact-wrapper .contact-info h3,
+.contact-wrapper .contact-info p,
+.contact-wrapper .contact-info hr {
+  margin-top: 16px;
+}
+.contact-wrapper .contact-info .social {
+  margin-top: 16px;
+}
+.contact-wrapper form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.contact-wrapper form input,
+.contact-wrapper form textarea {
+  background-color: transparent;
+  padding: 8px 16px;
+  border-radius: 16px;
+  outline: none;
+  border: 2px solid #ddd;
+  margin-top: 16px;
+}
+.contact-wrapper form button {
+  width: fit-content;
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  font-size: 16px;
+  margin-top: 16px;
+  cursor: pointer;
 }
