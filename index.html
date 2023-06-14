@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
   </head>
   <body>
     <header>
@@ -22,7 +23,7 @@
         <nav>
           <div class="menutoggle">
             <i class="fas fa-bars"></i>
-        </div>
+          </div>
           <ul>
             <a href="#about"><li class="active">About</li></a>
             <a href="#projects"><li>Projects</li></a>
@@ -77,20 +78,47 @@
           <h2 class="heading">My Work</h2>
           <div class="projects-categories flex">
             <ul>
-              <li class="active">All Projects</li>
-              <li>Landing Pages</li>
-              <li>E-Commerce</li>
-              <li>Portfolio</li>
+              <li class="projects-list active" data-filter="all">ALL</li>
+              <li class="projects-list" data-filter="landing-pages">
+                Landing Pages
+              </li>
+              <li class="projects-list" data-filter="e-commerce">E-Commerce</li>
+              <li class="projects-list" data-filter="social-media">
+                Social Media
+              </li>
+              <li class="projects-list" data-filter="portfolio">Portfolio</li>
             </ul>
           </div>
-          <div class="projects-cards flex">
-            <div class="project-card">
+          <div class="projects-cards">
+            <div class="project-card" data-item="landing-pages">
+              <div class="project-img">
+                <img src="images/camera.jpg" alt="" />
+              </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-item="landing-pages">
+              <div class="project-img">
+                <img src="images/camera.jpg" alt="" />
+              </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-item="portfolio">
+              <div class="project-img">
+                <img src="images/camera.jpg" alt="" />
+              </div>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-item="portfolio">
+              <div class="project-img">
+                <img src="images/camera.jpg" alt="" />
+              </div>
+            </div>
+            <div class="project-card" data-item="social-media">
+              <div class="project-img">
+                <img src="images/camera.jpg" alt="" />
+              </div>
+            </div>
+            <div class="project-card" data-item="social-media">
+              <div class="project-img">
+                <img src="images/camera.jpg" alt="" />
+              </div>
             </div>
           </div>
         </div>

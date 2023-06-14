@@ -218,6 +218,9 @@ body.dark-theme .social a:nth-child(2) {
   }
 }
 @media (max-width: 767px) {
+  main {
+    padding-top: 16px;
+  }
   .about .about-text p {
     width: 90%;
   }
@@ -247,24 +250,43 @@ body.dark-theme .social a:nth-child(2) {
   margin: 0 16px;
   cursor: pointer;
 }
-.projects .projects-cards .project-card {
-  width: 480px;
-  height: 320px;
-  background: url(../images/vamlt-project.png);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-bottom: 16px;
-  box-shadow: 0px 10px 15px -3px var(--bsh-2);
+.projects-cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.projects-cards .project-card {
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  position: relative;
+  padding: 8px;
+}
+.projects-cards .project-card .project-img {
+  position: relative;
+}
+.projects-cards .project-card .project-img img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+}
+.projects-cards .project-card.hide {
+  display: none;
 }
 @media (max-width: 767px) {
   .projects .projects-categories ul li {
     margin-bottom: 16px;
   }
+  .projects-cards .project-card {
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+  }
 }
-@media (max-width: 1200px) {
-  .projects .projects-cards {
-    justify-content: center;
+@media (max-width: 500px) {
+  .projects-cards .project-card {
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 .skills-wrapper {
