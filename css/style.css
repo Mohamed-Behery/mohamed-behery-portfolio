@@ -71,6 +71,7 @@ nav ul a {
 li.active,
 li:hover {
   color: var(--primary-color);
+  font-weight: bold;
 }
 nav ul .theme-switcher {
   margin-left: 16px;
@@ -79,7 +80,7 @@ nav ul .theme-switcher {
 }
 main {
   background-color: #f9f9f9;
-  padding-top: 64px;
+  padding: 64px 0;
 }
 .about .about-text P {
   max-width: 570px;
@@ -211,4 +212,14 @@ main {
   font-size: 16px;
   margin-top: 16px;
   cursor: pointer;
+}
+footer {
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  height: 64px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
