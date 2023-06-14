@@ -69,3 +69,18 @@ for (let i = 0; i < projectsList.length; i++) {
     }
   });
 }
+
+// Project Popup Page
+
+const projectPage = document.querySelector(".project-page");
+const popupOpenBtn = document.querySelector("#popup-open-btn");
+const popupCloseBtn = document.querySelector(".popup-close-btn");
+
+popupOpenBtn.addEventListener("click", function () {
+  projectPage.classList.add("active");
+});
+
+popupCloseBtn.addEventListener("click", function () {
+  projectPage.classList.remove("active");
+  projectPage.classList.remove("active");
+});
