@@ -3,6 +3,8 @@
 
 :root {
   --primary-color: #0061ab;
+  --text-color: #fff;
+  --border-color: #ddd;
 }
 html {
   scroll-behavior: smooth;
@@ -11,7 +13,7 @@ html {
   width: 12px;
 }
 ::-webkit-scrollbar-track {
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
 }
 ::-webkit-scrollbar-thumb {
   background: var(--primary-color);
@@ -58,8 +60,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 99;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
+  background-color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
 }
 header .logo {
   font-size: 24px;
@@ -108,7 +110,7 @@ main {
 .about .about-text .btn {
   display: inline-block;
   margin-top: 16px;
-  color: #fff;
+  color: var(--text-color);
   background-color: var(--primary-color);
   width: fit-content;
   padding: 16px 24px;
@@ -178,8 +180,8 @@ main {
 }
 .skills-wrapper .skill {
   margin: 0 32px 32px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: var(--text-color);
+  border: 1px solid var(--border-color);
   border-radius: 50%;
   padding: 8px;
 }
@@ -208,14 +210,14 @@ main {
   padding: 8px 16px;
   border-radius: 16px;
   outline: none;
-  border: 2px solid #ddd;
+  border: 2px solid var(--border-color);
   margin-top: 16px;
 }
 .contact-wrapper form button {
   width: fit-content;
   padding: 8px 16px;
   background-color: var(--primary-color);
-  color: #fff;
+  color: var(--text-color);
   border: none;
   border-radius: 16px;
   font-size: 16px;
@@ -223,8 +225,8 @@ main {
   cursor: pointer;
 }
 footer {
-  background-color: #fff;
-  border-top: 1px solid #ddd;
+  background-color: var(--text-color);
+  border-top: 1px solid var(--border-color);
   height: 64px;
   text-align: center;
   display: flex;
