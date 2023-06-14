@@ -97,7 +97,7 @@ nav ul .theme-switcher {
 .about .about-img {
   width: 35%;
   height: 400px;
-  background: url(/01_Development/images/mohamed-behery.jpg);
+  background: url(../images/mohamed-behery.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 50%;
@@ -120,4 +120,18 @@ nav ul .theme-switcher {
   width: 250px;
   height: 250px;
   border-radius: 16px;
+}
+.skills-wrapper {
+  margin-top: 32px;
+  justify-content: center;
+}
+.skills-wrapper .skill {
+  margin: 0 32px;
+  background-color: #ddd;
+  border-radius: 50%;
+  padding: 8px;
+}
+.skills-wrapper .skill img {
+  width: 48px;
+  object-fit: contain;
 }
