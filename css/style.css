@@ -48,9 +48,14 @@ body {
 header {
   background-color: #ddd;
   height: 64px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
 }
 header .logo {
   font-size: 24px;
+  text-transform: uppercase;
+  color: #000;
 }
 header .logo span {
   color: var(--primary-color);
@@ -69,6 +74,7 @@ li:hover {
 }
 nav ul .theme-switcher {
   margin-left: 16px;
+  font-weight: bold;
   cursor: pointer;
 }
 .about .about-text P {
@@ -126,7 +132,7 @@ nav ul .theme-switcher {
   justify-content: center;
 }
 .skills-wrapper .skill {
-  margin: 0 32px;
+  margin: 0 32px 32px;
   background-color: #ddd;
   border-radius: 50%;
   padding: 8px;
