@@ -144,6 +144,12 @@ main {
   border-radius: 24px;
   font-weight: bold;
 }
+.about .about-cta .cv-btn {
+  margin-left: 8px;
+  color: var(--primary-color);
+  background-color: var(--neutral-color);
+  border: 1px solid var(--border-color);
+}
 .about .about-cta .social {
   margin-left: 32px;
   margin-top: 16px;
@@ -213,6 +219,7 @@ body.dark-theme .social a:nth-child(2) {
   border-radius: 50%;
   padding: 8px;
   position: relative;
+  cursor: pointer;
 }
 .skills-wrapper .skill img {
   width: 48px;
