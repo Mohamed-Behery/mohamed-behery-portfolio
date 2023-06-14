@@ -6,7 +6,6 @@
 }
 html {
   scroll-behavior: smooth;
-  min-height: 1600px;
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -46,11 +45,12 @@ body {
   }
 }
 header {
-  background-color: #ddd;
   height: 64px;
   position: sticky;
   top: 0;
   z-index: 99;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
 }
 header .logo {
   font-size: 24px;
@@ -76,6 +76,10 @@ nav ul .theme-switcher {
   margin-left: 16px;
   font-weight: bold;
   cursor: pointer;
+}
+main {
+  background-color: #f9f9f9;
+  padding-top: 64px;
 }
 .about .about-text P {
   max-width: 570px;
@@ -139,5 +143,4 @@ nav ul .theme-switcher {
 }
 .skills-wrapper .skill img {
   width: 48px;
-  object-fit: contain;
 }
