@@ -270,6 +270,7 @@ body.dark-theme .social a:nth-child(2) {
   width: 100%;
   display: block;
   border-radius: 8px;
+  aspect-ratio: 1 / 1;
 }
 .projects-cards .project-card.hide {
   display: none;
@@ -289,7 +290,7 @@ body.dark-theme .social a:nth-child(2) {
   flex-direction: column;
   justify-content: center;
   opacity: 0;
-  transition: 0.2s;
+  transition: 0.1s;
 }
 .project-card:hover .project-details {
   opacity: 1;
