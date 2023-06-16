@@ -69,3 +69,17 @@ for (let i = 0; i < projectsList.length; i++) {
     }
   });
 }
+
+// Project Page
+
+const popup = document.querySelector("#popup");
+const popupOpenBtn = document.querySelector(".popup-open");
+const popupCloseBtn = document.querySelector(".popup-close");
+
+popupOpenBtn.addEventListener("click", function () {
+  popup.classList.add("active");
+});
+
+popupCloseBtn.addEventListener("click", function () {
+  popup.classList.remove("active");
+});
