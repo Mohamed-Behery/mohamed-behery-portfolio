@@ -333,6 +333,7 @@ body.dark-theme .social a:nth-child(2) {
   text-align: center;
   padding: 20px;
   z-index: 999;
+  transition: 0.5s;
 }
 .content p {
   margin-top: 24px;
