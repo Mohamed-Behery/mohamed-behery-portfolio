@@ -236,6 +236,56 @@ body.dark-theme .social a:nth-child(2) {
     margin-top: 32px;
   }
 }
+.skills-wrapper {
+  margin-top: 32px;
+  justify-content: center;
+}
+.skills-wrapper .skill {
+  margin: 0 32px 32px;
+  background-color: var(--neutral-color);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  padding: 8px;
+  width: 64px;
+  height: 64px;
+  position: relative;
+  cursor: pointer;
+}
+.skills .skill:hover {
+  overflow: visible;
+}
+.skills-wrapper .skill img {
+  width: 100%;
+}
+.skills .skill span {
+  background-color: var(--primary-color);
+  color: var(--neutral-color);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 16px;
+  width: fit-content;
+  padding: 4px;
+  bottom: -40px;
+  transition: 0.5s;
+  opacity: 0;
+  text-align: center;
+  z-index: 2;
+}
+.skills .skill span::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent var(--primary-color) transparent;
+  cursor: default;
+}
+.skills .skill:hover span {
+  opacity: 1;
+}
 .projects .projects-categories {
   justify-content: center;
 }
@@ -388,56 +438,6 @@ body.dark-theme .social a:nth-child(2) {
     flex: 0 0 100%;
     max-width: 100%;
   }
-}
-.skills-wrapper {
-  margin-top: 32px;
-  justify-content: center;
-}
-.skills-wrapper .skill {
-  margin: 0 32px 32px;
-  background-color: var(--neutral-color);
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-  padding: 8px;
-  width: 64px;
-  height: 64px;
-  position: relative;
-  cursor: pointer;
-}
-.skills .skill:hover {
-  overflow: visible;
-}
-.skills-wrapper .skill img {
-  width: 100%;
-}
-.skills .skill span {
-  background-color: var(--primary-color);
-  color: var(--neutral-color);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 16px;
-  width: fit-content;
-  padding: 4px;
-  bottom: -40px;
-  transition: 0.5s;
-  opacity: 0;
-  text-align: center;
-  z-index: 2;
-}
-.skills .skill span::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-style: solid;
-  border-width: 10px;
-  border-color: transparent transparent var(--primary-color) transparent;
-  cursor: default;
-}
-.skills .skill:hover span {
-  opacity: 1;
 }
 .contact-wrapper {
   margin-top: 32px;
