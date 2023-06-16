@@ -311,7 +311,7 @@ body.dark-theme .social a:nth-child(2) {
   margin: 40px 0;
   font-weight: 400;
 }
-.popup .overlay {
+.project-page .overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -321,8 +321,9 @@ body.dark-theme .social a:nth-child(2) {
   z-index: 998;
   transition: all 0.3s ease-in-out;
   display: none;
+  cursor: default;
 }
-.popup .content {
+.project-page .content {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -332,13 +333,15 @@ body.dark-theme .social a:nth-child(2) {
   height: 220px;
   text-align: center;
   padding: 20px;
+  border-radius: 8px;
   z-index: 999;
   transition: 0.5s;
+  cursor: default;
 }
 .content p {
   margin-top: 24px;
 }
-.popup .popup-close {
+.project-page .popup-close {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -353,10 +356,10 @@ body.dark-theme .social a:nth-child(2) {
   border-radius: 50%;
   cursor: pointer;
 }
-.popup.active .overlay {
+.project-page.active .overlay {
   display: block;
 }
-.popup.active .content {
+.project-page.active .content {
   transform: translate(-50%, -50%) scale(1);
 }
 .popup-open {
@@ -378,7 +381,7 @@ body.dark-theme .social a:nth-child(2) {
   }
 }
 @media (max-width: 576px) {
-  .popup .content {
+  .project-page .content {
     width: 80%;
   }
   .projects-cards .project-card {

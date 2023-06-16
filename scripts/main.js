@@ -72,14 +72,14 @@ for (let i = 0; i < projectsList.length; i++) {
 
 // Project Page
 
-const popup = document.querySelector("#popup");
+const projectPage = document.querySelector(".project-page");
 const popupOpenBtn = document.querySelector(".popup-open");
 const popupCloseBtn = document.querySelector(".popup-close");
 
 popupOpenBtn.addEventListener("click", function () {
-  popup.classList.add("active");
+  projectPage.classList.add("active");
 });
 
 popupCloseBtn.addEventListener("click", function () {
-  popup.classList.remove("active");
+  projectPage.classList.remove("active");
 });
