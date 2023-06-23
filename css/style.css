@@ -17,8 +17,6 @@ body.dark-theme {
   --background-color: #0f0f0f;
   --secondary-background-color: #1c1c1d;
   --border-color: #ddd;
-  --bsh-1: rgba(255, 255, 255, 0.1);
-  --bsh-2: rgba(255, 255, 255, 0.1);
 }
 html {
   scroll-behavior: smooth;
@@ -331,7 +329,7 @@ body.dark-theme .social a:nth-child(2) {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(5px);
   border-radius: 8px;
   padding: 30px;
@@ -380,16 +378,37 @@ body.dark-theme .social a:nth-child(2) {
   transform: translate(-50%, -50%) scale(0);
   background-color: var(--secondary-background-color);
   width: 450px;
-  height: 220px;
-  text-align: center;
+  height: fit-content;
   padding: 20px;
   border-radius: 8px;
   z-index: 999;
   transition: 0.5s;
   cursor: default;
 }
+.content div {
+  margin: 24px 0;
+}
+.content span,
+.content a {
+  background: var(--primary-color);
+  color: var(--neutral-color);
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 8px;
+}
 .content p {
-  margin-top: 24px;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+.content a {
+  font-size: 16px;
+}
+.content a.github-repo {
+  margin-left: 8px;
+  font-weight: 600;
+  color: var(--primary-color);
+  background-color: var(--neutral-color);
+  border: 1px solid var(--border-color);
 }
 .project-page .popup-close {
   position: absolute;
