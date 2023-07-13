@@ -55,6 +55,7 @@ body {
 }
 .section {
   margin-top: var(--spacing-xxlg);
+  scroll-margin-top: 100px;
 }
 .flex {
   display: flex;
@@ -174,13 +175,11 @@ main {
 }
 .about .about-text P {
   max-width: 570px;
+  margin-top: var(--spacing-md);
+  line-height: 1.5;
 }
 .about .about-text h2 span {
   color: var(--primary-color);
-}
-.about .about-text p {
-  margin-top: var(--spacing-md);
-  line-height: 1.5;
 }
 .about .about-cta {
   justify-content: start;
@@ -315,7 +314,7 @@ body.dark-theme .social a:nth-child(2) {
 /*----------
   PROJECTS SECTION 
  ----------*/
-.projects .projects-categories {
+/* .projects .projects-categories {
   justify-content: center;
 }
 .projects .projects-categories ul {
@@ -389,11 +388,151 @@ body.dark-theme .social a:nth-child(2) {
   line-height: 25px;
   margin: var(--spacing-xlg) 0;
   font-weight: 400;
+} */
+.project-card-wrapper {
+  position: relative;
+  height: 370px;
+  width: 95%;
+  max-width: 850px;
+  margin: auto;
+  border-radius: 25px;
+  background: var(--secondary-background-color);
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+  margin-top: var(--spacing-xlg);
+}
+.project-card {
+  position: absolute;
+  display: flex;
+  height: 360px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 25px;
+}
+.project-card .project-img {
+  height: 260px;
+  width: 260px;
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 2px 3px 15px rgba(0, 0, 0, 0.1);
+}
+.project-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: 0.6s;
+}
+#tap-1:checked ~ .project-card .img-1,
+#tap-2:checked ~ .project-card .img-2,
+#tap-3:checked ~ .project-card .img-3 {
+  opacity: 1;
+  transition-delay: 0.2s;
+}
+.content {
+  padding: 0 20px 0 35px;
+  max-width: 530px;
+  margin-left: 50px;
+  opacity: 0;
+  transition: 0.6s;
+}
+#tap-1:checked ~ .project-card .content-1,
+#tap-2:checked ~ .project-card .content-2,
+#tap-3:checked ~ .project-card .content-3 {
+  opacity: 1;
+  margin-left: 0px;
+  z-index: 100;
+  transition-delay: 0.3s;
+}
+.content span {
+  display: block;
+  color: var(--text-color);
+  font-size: var(--spacing-md);
+  font-weight: 400;
+}
+.content .title {
+  font-size: var(--spacing-lg);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin: var(--spacing-md) 0;
+}
+.content .text {
+  color: var(--text-color);
+  font-size: var(--spacing-md);
+  line-height: 1.5em;
+}
+.sliders {
+  position: absolute;
+  bottom: var(--spacing-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 12;
+}
+#imgTap:checked ~ .sliders {
+  display: none;
+}
+.sliders .tap {
+  position: relative;
+  height: 10px;
+  width: 30px;
+  background: var(--border-color);
+  border-radius: 5px;
+  display: inline-flex;
+  margin: 0 3px;
+  cursor: pointer;
+}
+.sliders .tap:hover {
+  background: #cccccc;
+}
+.sliders .tap:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: -100%;
+  background: linear-gradient(147deg, #0061ab, #093a5e);
+  border-radius: 10px;
+  transform: scaleX(0);
+  transition: transform 0.6s;
+  transform-origin: left;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  display: none;
+}
+#tap-1:checked ~ .sliders .tap-1:before,
+#tap-2:checked ~ .sliders .tap-2:before,
+#tap-3:checked ~ .sliders .tap-3:before {
+  transform: scaleX(1);
+  width: 100%;
+}
+@media screen and (max-width: 992px) {
+  .project-card-wrapper {
+    min-height: 650px;
+  }
+  .project-card {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .project-card .project-img {
+    margin-top: var(--spacing-lg);
+  }
+  .project-card .content {
+    padding: 0;
+    margin: 0;
+    margin-top: var(--spacing-lg);
+  }
+}
+@media screen and (max-width: 480px) {
+  .project-card-wrapper {
+    min-height: 750px;
+  }
 }
 /*----------
   PROJECT POPUP PAGE
  ----------*/
-.project-page .overlay {
+/* .project-page .overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -491,7 +630,7 @@ body.dark-theme .social a:nth-child(2) {
     flex: 0 0 100%;
     max-width: 100%;
   }
-}
+} */
 /*----------
   CONTACT SECTION 
  ----------*/
@@ -533,6 +672,9 @@ body.dark-theme .social a:nth-child(2) {
   cursor: pointer;
 }
 @media (max-width: 767px) {
+  .contact-wrapper {
+    justify-content: center;
+  }
   .contact-wrapper form {
     width: 90%;
     margin-top: var(--spacing-md);
