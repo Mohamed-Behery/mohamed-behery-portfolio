@@ -114,8 +114,8 @@ nav ul a {
   color: #000;
   color: var(--text-color);
 }
-li.active,
-li:hover {
+nav ul li.active,
+nav ul li:hover {
   color: var(--primary-color);
   font-weight: bold;
 }
@@ -488,6 +488,112 @@ input[type="checkbox"] {
   }
   .project-links .btn {
     font-size: 14px;
+  }
+}
+/*----------
+  BLOG SECTION 
+ ----------*/
+.blog .container {
+  position: relative;
+}
+.blog i {
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+.blog i.fa-arrow-left {
+  left: -10px;
+}
+.blog i.fa-arrow-right {
+  right: -10px;
+}
+.blog .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: 0;
+  scroll-behavior: smooth;
+  margin-top: var(--spacing-xlg);
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+/* .carousel.dragging {
+  scroll-behavior: auto;
+  scroll-snap-type: none;
+} */
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel .card {
+  list-style: none;
+  background-color: #fff;
+  border-radius: 8px;
+  height: 342px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
+  scroll-snap-align: start;
+  border: 1px solid var(--border-color);
+}
+.blog .carousel.dragging .card {
+  user-select: none;
+  cursor: grab;
+}
+.card .img {
+  width: 100%;
+  height: 50%;
+  border-radius: 50%;
+}
+.card .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* border-radius: 50%; */
+}
+.card .post-details {
+  padding: var(--spacing-md) var(--spacing-lg);
+  width: 100%;
+  height: 50%;
+}
+.card h2 {
+  font-weight: 500;
+  font-size: 24px;
+}
+.card p {
+  color: #6a6d78;
+  margin-top: var(--spacing-sm);
+  line-height: 1.5;
+  text-align: left;
+}
+@media screen and (max-width: 600px) {
+  .blog .carousel {
+    grid-auto-columns: 100%;
+  }
+  .blog i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+  .blog i.fa-arrow-left {
+    left: 5px;
+  }
+  .blog i.fa-arrow-right {
+    right: 5px;
   }
 }
 /*----------
